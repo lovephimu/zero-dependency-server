@@ -18,7 +18,9 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       res.statusCode = 404;
-      res.end('404 - File not found');
+      res.end(
+        '404 - File not found. So, basically this is working but how do I access index.html within replit?',
+      );
     } else {
       // Determine content type based on file extension
       const extname = path.extname(filePath);
