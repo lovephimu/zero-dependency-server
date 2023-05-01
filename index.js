@@ -46,7 +46,7 @@ const server = http.createServer((req, res) => {
 
 const port = 3000;
 
-server.listen(port, '0.0.0.');
+server.listen(port, '0.0.0.0');
 
 // listen locally:
 
