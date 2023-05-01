@@ -10,7 +10,7 @@ const dirName = path.dirname(fileURLToPath(import.meta.url)); // takes the URL o
 const server = http.createServer((req, res) => {
   const { url } = req; // object destructuring for url = req.url
   const filePath = path.join(dirName, 'public', url);
-
+  console.log(url);
   // path.join() is a Node.js method that joins two or more parts of a file path together. In this case, path.join(dirName, 'public', url) joins the dirName variable (which contains the directory path of the current module), the string 'public', and the url variable (which contains the URL of the current request) together to form a file path.
 
   // Using path.join method is recommended over using string concatenation to build file paths because it ensures that the resulting path is platform-independent. Different operating systems use different path separators (e.g., / for Unix-based systems and \ for Windows), and manually concatenating file paths with string methods can lead to inconsistencies across platforms.
